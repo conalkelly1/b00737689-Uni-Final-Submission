@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/classroom/teacher/waiting-room/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/classroom/teacher/waiting-room/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/classroom/teacher/waiting-room"],
+      "options": {
+        "jestConfig": "libs/classroom/teacher/waiting-room/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

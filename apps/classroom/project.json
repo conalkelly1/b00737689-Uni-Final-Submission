@@ -1,0 +1,93 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/classroom/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/classroom",
+        "index": "apps/classroom/src/index.html",
+        "baseHref": "/",
+        "main": "apps/classroom/src/main.tsx",
+        "polyfills": "apps/classroom/src/polyfills.ts",
+        "tsConfig": "apps/classroom/tsconfig.app.json",
+        "assets": [
+          "apps/classroom/src/favicon.ico",
+          "apps/classroom/src/assets"
+        ],
+        "styles": [
+          "apps/classroom/src/styles.css"
+        ],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/classroom/src/environments/environment.ts",
+              "with": "apps/classroom/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        },
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "classroom:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "classroom:build:production",
+          "hmr": false
+        },
+        "development": {
+          "buildTarget": "classroom:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/classroom/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/classroom"
+      ],
+      "options": {
+        "jestConfig": "apps/classroom/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

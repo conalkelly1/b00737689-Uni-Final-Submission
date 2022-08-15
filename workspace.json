@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "projects": {
+    "classroom": "apps/classroom",
+    "classroom-data-access-firebase": "libs/classroom/data-access/firebase",
+    "classroom-e2e": "apps/classroom-e2e",
+    "classroom-landing-feature": "libs/classroom/landing/feature",
+    "classroom-shell": "libs/classroom/shell",
+    "classroom-student-game-page": "libs/classroom/student/game-page",
+    "classroom-student-room-code-entry": "libs/classroom/student/room-code-entry",
+    "classroom-student-waiting-room": "libs/classroom/student/waiting-room",
+    "classroom-teacher-create-room": "libs/classroom/teacher/create-room",
+    "classroom-teacher-live-results": "libs/classroom/teacher/live-results",
+    "classroom-teacher-waiting-room": "libs/classroom/teacher/waiting-room",
+    "community": "apps/community",
+    "community-e2e": "apps/community-e2e",
+    "community-home-feature": "libs/community/home/feature",
+    "community-shell": "libs/community/shell",
+    "shared-data-access": "libs/shared/data-access",
+    "shared-firebase-data-access": "libs/shared/firebase/data-access",
+    "shared-firebase-ui": "libs/shared/firebase/ui",
+    "shared-ui-core": "libs/shared/ui/core",
+    "shared-ui-tile": "libs/shared/ui/tile"
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
+}

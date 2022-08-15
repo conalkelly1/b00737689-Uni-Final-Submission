@@ -1,0 +1,57 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ewgg/classroom/data-access/firebase": [
+        "libs/classroom/data-access/firebase/src/index.ts"
+      ],
+      "@ewgg/classroom/landing/feature": [
+        "libs/classroom/landing/feature/src/index.ts"
+      ],
+      "@ewgg/classroom/shell": ["libs/classroom/shell/src/index.ts"],
+      "@ewgg/classroom/student/game-page": [
+        "libs/classroom/student/game-page/src/index.ts"
+      ],
+      "@ewgg/classroom/student/room-code-entry": [
+        "libs/classroom/student/room-code-entry/src/index.ts"
+      ],
+      "@ewgg/classroom/student/waiting-room": [
+        "libs/classroom/student/waiting-room/src/index.ts"
+      ],
+      "@ewgg/classroom/teacher/create-room": [
+        "libs/classroom/teacher/create-room/src/index.ts"
+      ],
+      "@ewgg/classroom/teacher/live-results": [
+        "libs/classroom/teacher/live-results/src/index.ts"
+      ],
+      "@ewgg/classroom/teacher/waiting-room": [
+        "libs/classroom/teacher/waiting-room/src/index.ts"
+      ],
+      "@ewgg/community/home/feature": [
+        "libs/community/home/feature/src/index.ts"
+      ],
+      "@ewgg/community/shell": ["libs/community/shell/src/index.ts"],
+      "@ewgg/shared/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@ewgg/shared/firebase/data-access": [
+        "libs/shared/firebase/data-access/src/index.ts"
+      ],
+      "@ewgg/shared/firebase/ui": ["libs/shared/firebase/ui/src/index.ts"],
+      "@ewgg/shared/ui/core": ["libs/shared/ui/core/src/index.ts"],
+      "@ewgg/shared/ui/tile": ["libs/shared/ui/tile/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
